@@ -17,7 +17,7 @@
   "bugs": {
     "url": "https://github.com/zyzik1248/photos/issues"
   },
-  "homepage": "https://zyzik1248.github.io/photos",
+  "homepage": "https://zyzik1248.github.io/gallery",
   "devDependencies": {
     "@babel/core": "^7.17.5",
     "@babel/plugin-transform-runtime": "^7.17.0",
