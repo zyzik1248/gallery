@@ -12,8 +12,7 @@ const Photos: React.FC<Props> = ({ photoList }) => {
 
   useEffect(() => {
     ref?.current?.classList?.remove("photos-animation");
-
-    setTimeout(() => ref?.current?.classList?.add("photos-animation"), 300);
+    setTimeout(() => ref?.current?.classList?.add("photos-animation"), 200);
   }, [photoList]);
 
   return (

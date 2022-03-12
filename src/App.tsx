@@ -3,6 +3,7 @@ import Photos from "./components/photos/Photos";
 import { fetchPhotos, PhotoData } from "./rest";
 import "./App.less";
 import PrimaryButton from "./components/buttons/PrimaryButton";
+import { GoMarkGithub } from "react-icons/go";
 
 const App = () => {
   const [photoList, setPhotoList] = useState<PhotoData[] | undefined>([]);
@@ -35,6 +36,13 @@ const App = () => {
 
   return (
     <div className="app">
+      <a
+        href="https://github.com/zyzik1248/photos"
+        rel="noreferrer"
+        target="_blank"
+      >
+        <GoMarkGithub className="github-icon" />
+      </a>
       <Photos photoList={activePhotos || []} />
       <div className="buttons">
         <PrimaryButton
@@ -45,7 +53,7 @@ const App = () => {
         <PrimaryButton
           label="next"
           onClick={next}
-          disabled={photoList && position > photoList?.length-4}
+          disabled={photoList && position > photoList?.length - 4}
         />
       </div>
     </div>
