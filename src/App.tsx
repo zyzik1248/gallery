@@ -22,15 +22,8 @@ const App = () => {
     fetch();
   }, []);
 
-  const next = () => {
-    const pos = position + 3;
-    const list = photoList?.slice();
-    setActivePhotos(list?.splice(pos, 3));
-    setPosition(pos);
-  };
-
-  const prev = () => {
-    const pos = position - 3;
+  const changeSide = (side : number) => {
+    const pos = position + side*3;
     const list = photoList?.slice();
     setActivePhotos(list?.splice(pos, 3));
     setPosition(pos);
@@ -50,11 +43,11 @@ const App = () => {
         <PrimaryButton
           disabled={position === 0}
           label="previous"
-          onClick={prev}
+          onClick={()=>changeSide(-1)}
         />
         <PrimaryButton
           label="next"
-          onClick={next}
+          onClick={()=>changeSide(1)}
           disabled={photoList && position > photoList?.length - 4}
         />
       </div>
