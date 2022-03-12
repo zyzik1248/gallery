@@ -1,6 +1,8 @@
 import React, { useEffect, useRef } from "react";
+
 import { PhotoData } from "./../../rest";
 import Photo from "./Photo";
+
 import "./photos.less";
 
 interface Props {

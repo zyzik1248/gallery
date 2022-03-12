@@ -1,9 +1,11 @@
 import React, { useEffect, useState } from "react";
-import Photos from "./components/photos/Photos";
-import { fetchPhotos, PhotoData } from "./rest";
-import "./App.less";
-import PrimaryButton from "./components/buttons/PrimaryButton";
 import { GoMarkGithub } from "react-icons/go";
+
+import { fetchPhotos, PhotoData } from "./rest";
+import Photos from "./components/photos/Photos";
+import PrimaryButton from "./components/buttons/PrimaryButton";
+
+import "./App.less";
 
 const App = () => {
   const [photoList, setPhotoList] = useState<PhotoData[] | undefined>([]);
