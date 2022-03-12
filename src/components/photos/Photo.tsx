@@ -6,7 +6,7 @@ interface Props {
 }
 
 const Photo: React.FC<Props> = ({ url }) => {
-  return <img src={getPhotoUrl(url)}/>;
+  return <img className="photo" src={getPhotoUrl(url)} />;
 };
 
 export default Photo;

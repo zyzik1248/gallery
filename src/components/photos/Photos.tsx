@@ -1,6 +1,7 @@
 import React from "react";
 import { PhotoData } from "./../../rest";
 import Photo from "./Photo";
+import './photos.less'
 
 interface Props {
   photoList: PhotoData[];
@@ -8,7 +9,7 @@ interface Props {
 
 const Photos: React.FC<Props> = ({ photoList }) => {
   return (
-    <div>
+    <div className="photos">
       {photoList.map((el) => (
         <Photo key={el.id} url={el.url} />
       ))}
