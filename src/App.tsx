@@ -1,17 +1,22 @@
-import React, { useEffect } from "react";
-import { fetchImages } from "./rest";
+import React, { useEffect, useState } from "react";
+import Photos from "./components/photos/Photos";
+import { fetchPhotos, PhotoData } from "./rest";
 
 const App = () => {
+  const [photoList, setPhotoList] = useState<PhotoData[] | undefined>([]);
+  const [activePhotos, setActivePhotos] = useState<PhotoData[] | undefined>([]);
+
   useEffect(() => {
     const fetch = async () => {
-      const a = await fetchImages();
-      console.log(a)
+      const photoList = await fetchPhotos();
+      setPhotoList(photoList);
+      setActivePhotos(photoList?.splice(0,3))
     };
 
-   fetch()
+    fetch();
   }, []);
 
-  return <h1>App</h1>;
+  return <Photos photoList={activePhotos || []} />;
 };
 
 export default App;
