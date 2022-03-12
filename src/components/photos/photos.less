@@ -1,7 +1,17 @@
+@keyframes move {
+  from {
+    opacity: 0
+  }
+  to {
+    opacity: 1;
+  }
+}
+
 .photos {
   display: flex;
   gap: 0.4em;
-  padding: 0 2em;
+  width: calc(100% - 4em);
+  opacity: 0;
 
   .photo {
     flex: 1;
@@ -10,5 +20,9 @@
     border-radius: 15px;
     height: 50vh;
     object-fit: cover;
+  }
+
+  &.photos-animation {
+    animation: move 1s ease-in forwards;
   }
 }
