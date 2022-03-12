@@ -5,7 +5,8 @@
   "main": "index.tsx",
   "scripts": {
     "dev": "webpack serve --mode development",
-    "build": "webpack --mode production"
+    "build": "webpack --mode production",
+    "deploy": "gh-pages -d dist"
   },
   "repository": {
     "type": "git",
@@ -16,7 +17,7 @@
   "bugs": {
     "url": "https://github.com/zyzik1248/photos/issues"
   },
-  "homepage": "https://github.com/zyzik1248/photos#readme",
+  "homepage": "https://zyzik1248.github.io/photos",
   "devDependencies": {
     "@babel/core": "^7.17.5",
     "@babel/plugin-transform-runtime": "^7.17.0",
@@ -42,6 +43,7 @@
     "@babel/preset-typescript": "^7.16.7",
     "@babel/runtime": "^7.17.2",
     "babel-plugin-transform-runtime": "^6.23.0",
+    "gh-pages": "^3.2.3",
     "react-dom": "^17.0.2",
     "react-icons": "^4.3.1"
   }
